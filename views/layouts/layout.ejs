@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Total express EJS layouts</title>
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <%- include("../partials/header") %>
+        
+        <%- body%>
+
+        <div id="content">
+            <div id="scrollable">
+                <!-- Content will be rendered here without breadcrumb -->
+            </div>
+        </div>
+        <%- include("../partials/footer") %>
+        
+    </body>
+</html>

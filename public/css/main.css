@@ -1,0 +1,222 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+header, footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #4a4a4a;
+    color: white;
+    padding: 0 20px;
+}
+
+header h1{
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+#content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+}
+
+#content .scrollable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    flex: 1;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    gap: 10px;
+}
+
+li{
+    margin: 0;
+    padding: 8px 16px;
+    background: #6a6a6a;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+li:hover{
+    background: #555;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb {
+    background-color: #bbadad;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+    margin: 0;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.breadcrumb p {
+    margin: 0;
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+}
+
+.page-content .scrollable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    flex: 1;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.road-icon {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.road-vertical, .road-horizontal {
+    position: absolute;
+    background: #f4d03f;
+}
+
+.road-vertical {
+    width: 30px;
+    height: 200px;
+    left: 85px;
+    top: 0;
+}
+
+.road-horizontal {
+    width: 200px;
+    height: 30px;
+    left: 0;
+    top: 85px;
+}
+
+.road-vertical::before, .road-horizontal::before {
+    content: '';
+    position: absolute;
+    background: #2c2c2c;
+}
+
+.road-vertical::before {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: repeating-linear-gradient(
+        to bottom,
+        #2c2c2c 0px,
+        #2c2c2c 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.road-horizontal::before {
+    width: 100%;
+    height: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: repeating-linear-gradient(
+        to right,
+        #2c2c2c 0px,
+        #2c2c2c 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.road-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #2c2c2c;
+    border-radius: 50%;
+    border: 3px solid #f4d03f;
+}
+
+.road-dot-1 { top: 20px; left: 20px; }
+.road-dot-2 { top: 20px; right: 20px; }
+.road-dot-3 { bottom: 20px; left: 20px; }
+.road-dot-4 { bottom: 20px; right: 20px; }
+.road-dot-5 { top: -10px; left: 85px; }
+.road-dot-6 { bottom: -10px; left: 85px; }
+.road-dot-7 { top: 85px; left: -10px; }
+.road-dot-8 { top: 85px; right: -10px; }
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.pp {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    background-color: #4a4a4a;
+    z-index: 1000;
+    position:absolute
+}
+
+footer{
+    justify-content: center;
+}
+
+footer a{
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}

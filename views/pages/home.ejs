@@ -1,0 +1,21 @@
+<% if (typeof nickname!=='undefined' && typeof sex!=='undefined'){ %>
+    <% if(sex=='male'){%>
+        <p>Bonjour Mr <%=nickname%></p>
+    <% }else if(sex=='female'){%>
+        <p>Bonjour Mme <%=nickname%></p>
+    <%}else{%>
+        <p>Bonjour <%=nickname%></p>
+    <% } %>
+<% }else if(typeof nickname=='undefined' && typeof sex!=='undefined') {%>
+    <% if(sex=='male'){%>
+        <p>Bonjour bel inconnu</p>
+    <% }else if(sex=='female'){%>
+        <p>Bonjour belle inconnue</p>
+    <% }else{%>
+        <p>Bonjour Bel(le) inconnu(e)</p>
+    <% } %>
+<% }else if(typeof nickname!=='undefined' && typeof sex=='undefined'){%>
+    <p>Bonjour <%= nickname %></p>
+<% }else{ %>
+    <p>Bonjour bel(le) inconnu(e)</p>
+<% } %>
